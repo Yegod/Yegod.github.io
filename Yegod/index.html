@@ -5,16 +5,19 @@
   
 
   
-  <title>Yegod | 叶神</title>
+  <title>叶神</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Yegod">
+  <meta name="description" content="title: 搭建博客date: 2018-02-27 15:01:47tags:—如何用hexo搭建博客使用 Hexo &amp;amp; Github建一个博客本人只在mac上操作过，如果在Windows上面可能略微有点出入，如果遇到某些命令不能执行，请自行查阅替代命令。 什么是Hexo？hexo官方文档 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="叶神">
 <meta property="og:url" content="http://yoursite.com/Yegod/index.html">
 <meta property="og:site_name" content="叶神">
+<meta property="og:description" content="title: 搭建博客date: 2018-02-27 15:01:47tags:—如何用hexo搭建博客使用 Hexo &amp;amp; Github建一个博客本人只在mac上操作过，如果在Windows上面可能略微有点出入，如果遇到某些命令不能执行，请自行查阅替代命令。 什么是Hexo？hexo官方文档 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-27T07:01:47.438Z">
+<meta property="og:updated_time" content="2018-02-27T07:34:29.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yegod">
+<meta name="twitter:title" content="叶神">
+<meta name="twitter:description" content="title: 搭建博客date: 2018-02-27 15:01:47tags:—如何用hexo搭建博客使用 Hexo &amp;amp; Github建一个博客本人只在mac上操作过，如果在Windows上面可能略微有点出入，如果遇到某些命令不能执行，请自行查阅替代命令。 什么是Hexo？hexo官方文档 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）">
   
     <link rel="alternate" href="/atom.xml" title="叶神" type="application/atom+xml">
   
@@ -64,30 +67,48 @@
         <section id="main"><article id="post-Yegod" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/Yegod/" class="article-date">
-  <time datetime="2018-02-27T07:01:47.000Z" itemprop="datePublished">2018-02-27</time>
+  <time datetime="2018-02-27T07:01:47.437Z" itemprop="datePublished">2018-02-27</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Yegod
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<p>title: 搭建博客<br>date: 2018-02-27 15:01:47<br>tags:<br>—如何用hexo搭建博客<br>使用 Hexo &amp; Github建一个博客<br>本人只在mac上操作过，如果在Windows上面可能略微有点出入，如果遇到某些命令不能执行，请自行查阅替代命令。</p>
+<p>什么是Hexo？<br>hexo官方文档</p>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>什么是Github？<br>Github 维基百科</p>
+<p>使用二者搭建博客的好处<br>可以不用购买域名和服务器，配置比较简单，在搭建的过程中还可以学习使用github！</p>
+<p>步骤<br>新建第一篇博客<br>1.首先，我们先需要安装git和node.js，并且要注册Github</p>
+<p>node.js<br>git<br>github<br>2.接下来我们需要安装Hexo,打开终端(Terminal)</p>
+<p>1<br>npm install -g hexo-cli<br>3.进入一个安全目录</p>
+<p>1<br>cd ~/Desktop<br>4.新建一个文件夹并且进入</p>
+<p>1<br>2<br>mkdir Blog<br>cd Blog<br>5.依次执行</p>
+<p>1<br>2<br>3<br>hexo init myBlog<br>cd mylog<br>npm i<br>6.新建第一篇博客</p>
+<p>1<br>hexo new blog-1.md<br>7.编辑上面这个md文件，这个文件的内容就是你的博客内容</p>
+<p>1<br>open ~/Desktop/Blog/myBlog/source/_posts/blog-1.md<br>8.进入Github,点击绿色按钮【new repository】，新建一个仓库的名称为【你的用户名.github.io】的仓库，比如我的是【mysteryven.github.io】输入名称之后什么都不要点，直接点击下面的【create repository】</p>
+<p>打开命令行<br>1<br>open _config.yml<br>第6行title改为你想的标题<br>第9行author改为你的名字<br>最后一行type改为</p>
+<p>1<br>type: git<br>type下面新加一行，左边和type对齐(type:和repo:后面都有空格)</p>
+<p>1<br>repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:mysteryven/mysteryven.github.io.git<br>上面的地址是你们github上面的ssh的地址，如果找不到可以修改我用户名的部分转化成你们的。</p>
+<p>10.依次执行</p>
+<p>1<br>2<br>npm install hexo-deployer-git –save<br>hexo deploy<br>11.此时您就可以预览了第一篇博客了，预览地址打开【你的用户名.github.io】对应的仓库的setting，往下面翻就能找到</p>
+<p>第二篇博客<br>1.依次执行</p>
+<p>1<br>2<br>3<br>4<br>hexo new 第二篇博客<br>open new ~/Desktop/Blog/myBlog/source/_posts/第二篇博客.md<br>hexo generate<br>hexo deploy<br>上面open后面的路径是您执行上一步操作命令行给出的那个</p>
+<p>完成啦~ 以后还想继续添加的话就按照这个步骤！<br>给博客换主题<br>1.从主题合集里面选择一个自己满意的主题<br>2.进入他的github首页<br>3.复制它的ssh地址,下面假定我选择了一个主题<br>4.</p>
+<p>1<br>cd themes<br>5.</p>
+<p>1<br>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:iissnan/hexo-theme-next.git<br>6.</p>
+<p>1<br>cd ..<br>7.<br>将 _config.yml 的第 75 行改为</p>
+<p>hexo-theme-next，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">8. 依次执行下面代码，执行完毕，请等待一分钟，就可以看到新主题了</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p>上传源代码<br>这一步的目的是为了备份您博客里面的数据，如果有一天您丢掉了【myBlog】文件夹里面的内容，那么还可以通过这次的备份还原</p>
+<p>在Github创建名为【blog-generator】的空仓库<br>在接下来的页面中点击截图中的ssh，然后按照【create a new repository on the command line】的步骤执行<br>这样之后就可以啦，每次写完代码，就用git的一系列操作add/commit/push等传到这个仓库里面就可以了<br>完成</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/Yegod/" data-id="cje5b1e7p0001v8v3ct4kjrb5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/Yegod/" data-id="cje5c6yjh0000zwv3d2gnkhoz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +157,7 @@
       <ul>
         
           <li>
-            <a href="/Yegod/">Yegod</a>
+            <a href="/Yegod/">(no title)</a>
           </li>
         
           <li>
