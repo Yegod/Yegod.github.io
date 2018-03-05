@@ -114,11 +114,13 @@
 <p>3 登陆登陆你的github帐户。点击你的头像，然后 Settings -&gt; 左栏点击 SSH and GPG keys -&gt; 点击 New SSH key。<br>然后你复制上面的公钥内容，粘贴进“Key”文本域内。 title域，自己随便起个名字。<br>点击 Add key。<br>4 验证<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
 <p>中途会提示(yes/no) 输入yes回车，<br>出现 Hi xxx! You’ve successfully authenticated, but GitHub does not  provide shell access.或者其他提示 sucessfully  就成功了。</p>
 <p><img src="http://p53kf6ylu.bkt.clouddn.com/12.png" alt="12"></p>
-<p>完成后，我们打开我们建立的文件 Blog-&gt; myBlog  打开_config.yml,这个文件是hexo博客的配置文件，，需要修改以下配置文件内容来与github建立链接<br>这里我们可以下载<strong>notepad++</strong>来打开这个.yml的文件<br>需要修改的内容有3个：<br>1 打开文件后，拉到最末尾的位置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“<span class="built_in">type</span>:”(这里有个空格)git（yml的配置内容的冒号“:” 后面都是加一个空格然后才加内容的，是一种语法）</span><br></pre></td></tr></table></figure></p>
+<p>完成后，我们打开我们建立的文件 Blog-&gt; myBlog  打开_config.yml,这个文件是hexo博客的配置文件，，需要修改以下配置文件内容来与github建立链接<br>这里我们可以下载<strong>notepad++</strong>来打开这个.yml的文件<br>需要修改的内容有3个：<br>1 打开文件后，拉到最末尾的位置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>:(空格)git     （yml的配置内容的冒号“:” 后面都是加一个空格然后才加内容的，是一种语法）</span><br></pre></td></tr></table></figure></p>
 <p>2 打开自己的GitHub，打开你刚刚建立的仓库(就是你想把文件上传到的那个远程仓库，你github注册名.github.io) 右侧有一个绿色<strong> Clone download </strong>，点它，然后右上角有个<strong>Use SSH</strong>，复制这个链接<a href="mailto:**git@github.com" target="_blank" rel="noopener">**git@github.com</a>:Yegod/Yegod.git**</p>
 <p><img src="http://p53kf6ylu.bkt.clouddn.com/13.png" alt="13"> </p>
-<p>3 在.yml的type:下面加如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo：(空格)git@github.com:Yegod/Yegod.git</span><br></pre></td></tr></table></figure></p>
-<p>在repo:的再下一行加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">branch:master</span><br></pre></td></tr></table></figure></p>
+<p>3 在.yml的type:下面加如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo(空格)git@github.com:Yegod/Yegod.git</span><br></pre></td></tr></table></figure></p>
+<p>在repo:的再下一行加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">branch:(空格)master</span><br></pre></td></tr></table></figure></p>
+<p>如图</p>
+<p><img src="http://p53kf6ylu.bkt.clouddn.com/20.png" alt="20"> </p>
 <p>然后保存下来关闭。<br>完成以上操作，那么就基本完成了，接下来需要将本地hexo的博客文件部署到github就行了<br>这里要注意的是，部署的时候，git的操作界面一定要在myBlog文件夹里，因为，是要将myBlog的文件部署到github里面。依次输入以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 npm install hexo-deployer-git --save (可能会WARN，但是只要不是error就没问题) </span><br><span class="line">2 hexo d 	</span><br><span class="line">3 hexo g</span><br></pre></td></tr></table></figure></p>
 <p>如果操作有误可以通过输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></p>
 <p>然后重新完成部署的操作<br>完成以上操作后再刷新以下自己的GitHub，然后打开我们新建的那个远程仓库，会看到文件已经成功上传到GitHub里面了</p>
@@ -134,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog-1/" data-id="cjedx75pv0000tkv3v7ke1ic1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog-1/" data-id="cjee214q20000xsv3fgznjzty" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Teach/">Teach</a></li></ul>
@@ -181,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/hello-world/" data-id="cjedx75q40001tkv3v5hvfdp5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/hello-world/" data-id="cjee214q70001xsv3n62b51jl" class="article-share-link">Share</a>
       
       
     </footer>
